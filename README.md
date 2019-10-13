@@ -1,24 +1,14 @@
-# README
+# MOCK PAYMENT SYSTEM
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. rvm gemset create - Ruby 2.5.3 & Rails 6.0
 
-Things you may want to cover:
+2. Created app structure with Rails new and did initial commit
 
-* Ruby version
+3. Added 'rubocop' 
+	
+	- Fixed offence Missing magic comment # frozen_string_literal: true with commnad  "rubocop --only Style/FrozenStringLiteralComment -a"
+	- Ran "rubocop -a" to fix some offences automatically
 
-* System dependencies
+4. Added .rubocop.yml to configure cops
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+5. Added 'rspec'
