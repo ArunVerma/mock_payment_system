@@ -11,4 +11,6 @@
 
 4. Added .rubocop.yml to configure cops
 
-5. Added 'rspec'
+5. Added 'rspec-rails' & factory_bot_rails gems and created model classes
+
+6. Wrting specs fist without defining models and writing migration to follow tdd
