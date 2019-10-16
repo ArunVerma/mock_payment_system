@@ -1,5 +1,30 @@
 # MOCK PAYMENT SYSTEM
 
+## REQUIREMENTS
+
+Create a mock payment system:
+1. Relations: 
+    * Merchants have many payment transactions of different types 
+    * Transactions are related (can navigate in-between)
+    * Destroys all transactions, if merchant is deleted
+    * Has merchant and admin user roles (UI) (optional)
+
+2. Model fields: 
+		* Merchant: name, description, email, status (active, inactive), total transaction sum(of all transactions)
+    * Transaction: UUID, amount, status (processed, error)
+
+3. Inputs and tasks:
+    * Accepts payments using XML/JSON API (single point POST request)
+    * Imports new merchants from CSV (rake task)
+    * Has background job deleting transactions older than an hour (cron job)
+
+4. Presentation:
+    * Display, edit, destroy merchants
+    * Display transactions
+
+
+## Steps taken to implement
+
 1. rvm gemset create - Ruby 2.5.3 & Rails 6.0
 
 2. Created app structure with Rails new and did initial commit
