@@ -5,7 +5,7 @@ class CreateMerchants < ActiveRecord::Migration[6.0]
       t.string :description
       t.string :email
       t.string :status
-      t.decimal :total_transaction_sum
+      t.decimal :transactions_sum, default: 0
       t.timestamps
     end
   end
