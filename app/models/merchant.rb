@@ -8,4 +8,8 @@ class Merchant < ApplicationRecord
   validates :status, inclusion: { in: %w(active inactive) }
   scope :active, -> { where(status: 'active') }
   scope :inactive, -> { where(status: 'inactive') }
+
+  def active?
+  	status == 'active'
+  end
 end
