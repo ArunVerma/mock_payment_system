@@ -39,3 +39,7 @@ Create a mock payment system:
 5. Added 'rspec-rails' & factory_bot_rails gems and created model classes
 
 6. Wrting specs fist without defining models and writing migration to follow tdd
+
+7. Added tramsaction api and its rspec
+
+8. Added rake task to import merchants from csv file
