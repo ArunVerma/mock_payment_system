@@ -43,3 +43,7 @@ Create a mock payment system:
 7. Added tramsaction api and its rspec
 
 8. Added rake task to import merchants from csv file
+
+9. Added background job to delete transactions older that an hour
+
+10. Added index page for Merchants

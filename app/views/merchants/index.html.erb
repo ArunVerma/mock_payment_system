@@ -1,0 +1,21 @@
+<h3>All Merchants</h3>
+<table border='1'>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Status</th>
+    <th>Transaction Amount</th>
+    <th>Transaction Count</th>
+    <th>Action</th>    
+  </tr>
+  <% @merchants.each do |merchant| %>
+    <tr>
+      <td><%= merchant.name %></td>
+      <td><%= merchant.email %></td>
+      <td><%= merchant.status %></td>
+      <td align="right"><%= merchant.transactions_sum %></td>
+      <td align="center"><%= link_to merchant.transactions.count, '#' %></td>
+      <td><%= link_to 'View', '#' %> | <%= link_to 'Edit', '#' %> | <%= link_to 'Destroy', '#' %></td>
+    </tr>
+  <% end %>
+</table>
