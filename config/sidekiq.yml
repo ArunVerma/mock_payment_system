@@ -5,5 +5,5 @@
  - default
 :schedule:
   first:
-    cron: '1 * * * * *'   # Runs once per minute
+    cron: '* 1 * * * *'   # Runs once per hour
     class: 'TransactionWorker'
