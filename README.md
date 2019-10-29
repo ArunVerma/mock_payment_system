@@ -47,3 +47,5 @@ Create a mock payment system:
 9. Added background job to delete transactions older that an hour
 
 10. Added index page for Merchants
+
+11. Added presenter pattern

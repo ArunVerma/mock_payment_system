@@ -8,14 +8,16 @@
     <th>Transaction Count</th>
     <th>Action</th>    
   </tr>
-  <% @merchants.each do |merchant| %>
-    <tr>
-      <td><%= merchant.name %></td>
-      <td><%= merchant.email %></td>
-      <td><%= merchant.status %></td>
-      <td align="right"><%= merchant.transactions_sum %></td>
-      <td align="center"><%= link_to merchant.transactions.count, '#' %></td>
-      <td><%= link_to 'View', '#' %> | <%= link_to 'Edit', '#' %> | <%= link_to 'Destroy', '#' %></td>
-    </tr>
+  <% @merchants.each do |m| %>
+    <% present(m) do |merchant| %>
+      <tr>
+        <td><%= merchant.name %></td>
+        <td><%= merchant.email %></td>
+        <td><%= merchant.status %></td>
+        <td align="right"><%= merchant.transaction_amount %></td>
+        <td align="center"><%= link_to merchant.transactions_count, '#' %></td>
+        <td><%= link_to 'View', '#' %> | <%= link_to 'Edit', '#' %> | <%= link_to 'Destroy', '#' %></td>
+      </tr>
+    <% end %>
   <% end %>
 </table>
