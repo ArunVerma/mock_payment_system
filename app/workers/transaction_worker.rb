@@ -5,14 +5,12 @@ require 'sidekiq-scheduler'
 class TransactionWorker
   include Sidekiq::Worker
 
-  def perform(*args)
+  def perform
     puts 'started process to delete transactions older than an hour'
-    Transaction.where('created_at < ?', 1.hours.ago).find_in_batches do | group |
+    Transaction.where('created_at < ?', 1.hours.ago).find_in_batches do |group|
       # need to check if group.destroy_all works here
-    	group.each do |transaction|
-        transaction.destroy
-      end
+      group.each(&:destroy)
     end
-    puts "Complete !!!"
+    puts 'Complete !!!'
   end
 end
