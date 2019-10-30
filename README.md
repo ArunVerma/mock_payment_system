@@ -49,3 +49,7 @@ Create a mock payment system:
 10. Added index page for Merchants
 
 11. Added presenter pattern
+
+12. Added View for Merchant and transaction (Edit, display and destroy)
+
+13. Added integration test
