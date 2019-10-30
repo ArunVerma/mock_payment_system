@@ -14,7 +14,11 @@ class MerchantsController < ApplicationController
 
   def destroy
     @merchant = Merchant.find(params[:id])
-    @merchant.destroy
+    if @merchant.destroy
+      flash[:success] = 'Merchant was successfully destroyed.'
+    else
+      flash[:error] = 'Can\'t destory this merchant.'
+    end
     redirect_to merchants_path
   end
 
@@ -26,8 +30,10 @@ class MerchantsController < ApplicationController
     @merchant = Merchant.find(params[:id])
 
     if @merchant.update(merchant_params)
+      flash[:success] = 'Merchant was successfully updated.'
       redirect_to merchants_path
     else
+      flash[:error] = @merchant.errors.full_messages.join(',').to_s
       render 'edit'
     end
   end
