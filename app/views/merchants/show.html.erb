@@ -1,0 +1,8 @@
+<span><%= link_to 'Back', merchants_path %></span>
+<h3><%= @merchant.name %>'s Details</h3>
+<hr />
+<p><b>Email</b> -&nbsp;<%= @merchant.email %></p>
+<p><b>Status</b> -&nbsp;<%= @merchant.status %></p>
+<p><b>Description</b> -&nbsp;<%= @merchant.description %></p>
+<hr />
+<%= render partial: '/transactions/list_transactions', locals: {transactions: @merchant.transactions} %>

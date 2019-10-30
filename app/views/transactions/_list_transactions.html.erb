@@ -1,0 +1,21 @@
+<h3>Transactions List</h3>
+<table border='1'>
+  <tr>
+    <th>#</th>
+    <th>Merchant Name</th>
+    <th>uuid</th>
+    <th>Status</th>
+    <th>Amount</th>    
+  </tr>
+  <% transactions.each_with_index do | txn, idx | %>
+     <% present(txn) do |val| %>
+      <tr>
+        <th><%= idx + 1 %></th>
+        <th><%= val.merchant_name %></th>
+        <th><%= val.uuid %></th>
+        <th><%= val.status %></th>
+        <th><%= val.amount %></th>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
